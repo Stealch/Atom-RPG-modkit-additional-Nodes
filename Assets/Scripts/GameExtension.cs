@@ -13,7 +13,7 @@ using UnityEditor;
 public static class GameExtension
 {
 	public static void VehicleMaxFuel(this Game mf, float value)
-	{
+	{	
 		bool flag = Game.World && Game.World.Vehicle != null;
 		if (flag)
 		{
@@ -28,4 +28,16 @@ public static class GameExtension
 			Game.World.Vehicle.fuelConsumption = value;
 		}
 	}
+	public static void VehicleSpeed(this Game sp, float value)
+	{
+		bool flag = Game.World && Game.World.Vehicle != null;
+		if (flag)
+		{
+			Game.World.Vehicle.speed = value;
+		}
+	}
 }
+
+
+ 
+	
